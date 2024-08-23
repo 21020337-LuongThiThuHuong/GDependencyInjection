@@ -1,8 +1,8 @@
-# GAndroidRestApi
+# GDependencyInjection
 
 ## Giới Thiệu
 
--  Implement retrofit, ktor gọi api
+-  Sử dụng Hilt để DI retrofit và ktor để sử dụng gọi request.
 
 ## Demo giao diện
 
