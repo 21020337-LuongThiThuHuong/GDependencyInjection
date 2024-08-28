@@ -9,7 +9,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-
     private lateinit var recyclerView: RecyclerView
     private lateinit var pokemonAdapter: PokemonAdapter
 
@@ -23,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = GridLayoutManager(this, 2)
 
         viewModel.pokemonList.observe(this) { pokemonList ->
-            pokemonAdapter = PokemonAdapter(pokemonList)
+            pokemonAdapter = PokemonAdapter(this, pokemonList)
             recyclerView.adapter = pokemonAdapter
         }
 
